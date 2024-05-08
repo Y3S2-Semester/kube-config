@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: course-content-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: course-content-service
+  template:
+    metadata:
+      labels:
+        app: course-content-service
+    spec:
+      containers:
+      - name: course-content-service
+        image: zulake/course-content-service:latest
+        ports:
+        - containerPort: 8200
