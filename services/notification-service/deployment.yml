@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: notification-service
-        image: zulake/notification-service:cfe3afac56304ec6871b961346c9a30ec895c2b9
+        image: zulake/notification-service:76ff0726e85b7d949ded28fe325aa20201815808
         imagePullPolicy: Always
         ports:
         - containerPort: 7000
