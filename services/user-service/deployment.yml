@@ -15,5 +15,6 @@ spec:
       containers:
       - name: user-service
         image: zulake/user-service:latest
+        imagePullPolicy: Always
         ports:
         - containerPort: 8000

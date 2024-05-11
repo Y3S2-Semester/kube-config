@@ -15,5 +15,6 @@ spec:
       containers:
       - name: notification-service
         image: zulake/notification-service:latest
+        imagePullPolicy: Always
         ports:
         - containerPort: 7000

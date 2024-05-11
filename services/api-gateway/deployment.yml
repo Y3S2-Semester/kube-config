@@ -15,5 +15,9 @@ spec:
       containers:
       - name: api-gateway
         image: zulake/api-gateway:latest
+        imagePullPolicy: Always
         ports:
-        - containerPort: 8765
+        - containerPort: 8100
+        env:
+          - name: SPRING_PROFILES_ACTIVE
+            value: "k8s"
