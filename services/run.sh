@@ -8,7 +8,7 @@ declare -A services=(
   ["enrollment-service"]=8300
   ["notification-service"]=7000
   ["payment-service"]=3000
-  ["api-gateway"]=8080
+  ["api-gateway"]=8765
 )
 
 for service in "${!services[@]}"; do
