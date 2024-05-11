@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: api-gateway
-        image: zulake/api-gateway:a89cb587430de90a4f60fe86566ab021ca4584ba
+        image: zulake/api-gateway:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 8765
@@ -22,7 +22,7 @@ spec:
           - name: SPRING_PROFILES_ACTIVE
             value: "k8s"
         readinessProbe:
-          initialDelaySeconds: 120
+          initialDelaySeconds: 30
           periodSeconds: 10
           successThreshold: 1
           timeoutSeconds: 5
@@ -32,7 +32,7 @@ spec:
             path: /actuator/health/readiness
             port: 8765
         livenessProbe:
-          initialDelaySeconds: 120
+          initialDelaySeconds: 30
           periodSeconds: 10
           successThreshold: 1
           timeoutSeconds: 5
