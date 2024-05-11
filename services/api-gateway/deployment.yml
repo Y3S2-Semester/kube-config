@@ -31,7 +31,6 @@ spec:
             scheme: HTTP
             path: /actuator/health/readiness
             port: 8765
-
         livenessProbe:
           initialDelaySeconds: 120
           periodSeconds: 10
