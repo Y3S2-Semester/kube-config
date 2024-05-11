@@ -17,26 +17,30 @@ spec:
         image: zulake/api-gateway:a89cb587430de90a4f60fe86566ab021ca4584ba
         imagePullPolicy: Always
         ports:
-        - containerPort: 8100
+        - containerPort: 8765
         env:
           - name: SPRING_PROFILES_ACTIVE
             value: "k8s"
-        livenessProbe:
-          httpGet:
-            path: /system/health
-            port: 8080
-            scheme: HTTP
-          initialDelaySeconds: 10
-          periodSeconds: 10
-          timeoutSeconds: 3
         readinessProbe:
-          httpGet:
-            path: /system/health
-            port: 8080
-            scheme: HTTP
-          initialDelaySeconds: 10
+          initialDelaySeconds: 120
           periodSeconds: 10
-          timeoutSeconds: 3
+          successThreshold: 1
+          timeoutSeconds: 5
+          failureThreshold: 3
+          httpGet:
+            scheme: HTTP
+            path: /actuator/health/readiness
+            port: 8765
+        livenessProbe:
+          initialDelaySeconds: 120
+          periodSeconds: 10
+          successThreshold: 1
+          timeoutSeconds: 5
+          failureThreshold: 3
+          httpGet:
+            scheme: HTTP
+            path: /actuator/health/liveness
+            port: 8765
         resources:
           requests:
             cpu: 20m
