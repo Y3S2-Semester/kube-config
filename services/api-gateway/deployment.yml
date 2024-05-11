@@ -24,7 +24,7 @@ spec:
         livenessProbe:
           httpGet:
             path: /system/health
-            port: 8080
+            port: 8765
             scheme: HTTP
           initialDelaySeconds: 10
           periodSeconds: 10
@@ -32,7 +32,7 @@ spec:
         readinessProbe:
           httpGet:
             path: /system/health
-            port: 8080
+            port: 8765
             scheme: HTTP
           initialDelaySeconds: 10
           periodSeconds: 10
