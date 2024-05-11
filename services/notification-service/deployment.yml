@@ -21,3 +21,28 @@ spec:
         env:
           - name: SPRING_PROFILES_ACTIVE
             value: "k8s"
+        readinessProbe:
+          initialDelaySeconds: 120
+          periodSeconds: 10
+          successThreshold: 1
+          timeoutSeconds: 5
+          failureThreshold: 3
+          httpGet:
+            scheme: HTTP
+            path: /actuator/health/readiness
+            port: 7000
+        livenessProbe:
+          initialDelaySeconds: 120
+          periodSeconds: 10
+          successThreshold: 1
+          timeoutSeconds: 5
+          failureThreshold: 3
+          httpGet:
+            scheme: HTTP
+            path: /actuator/health/liveness
+            port: 7000
+        resources:
+          requests:
+            cpu: 20m
+            ephemeral-storage: 1Gi
+            memory: 128Mi

@@ -22,7 +22,7 @@ spec:
           - name: SPRING_PROFILES_ACTIVE
             value: "k8s"
         readinessProbe:
-          initialDelaySeconds: 30
+          initialDelaySeconds: 120
           periodSeconds: 10
           successThreshold: 1
           timeoutSeconds: 5
@@ -32,7 +32,7 @@ spec:
             path: /actuator/health/readiness
             port: 8765
         livenessProbe:
-          initialDelaySeconds: 30
+          initialDelaySeconds: 120
           periodSeconds: 10
           successThreshold: 1
           timeoutSeconds: 5
