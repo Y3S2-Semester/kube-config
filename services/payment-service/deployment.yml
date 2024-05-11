@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: payment-service
-        image: zulake/payment-service:6cd9fd41b6e0c9d73bccb708757ce949fe57edea
+        image: zulake/payment-service:cfe3afac56304ec6871b961346c9a30ec895c2b9
         imagePullPolicy: Always
         ports:
         - containerPort: 3000
