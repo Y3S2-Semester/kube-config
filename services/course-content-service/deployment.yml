@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: course-content-service
-        image: zulake/course-content-service:65a7e94270edfb068129d1e08c4be362a679920a
+        image: zulake/course-content-service:4e2fb960e82ff85a232c7f9eede8dee179a4fc0e
         imagePullPolicy: Always
         ports:
         - containerPort: 8200
