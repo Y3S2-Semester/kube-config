@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: api-gateway
-        image: zulake/api-gateway:dc4dfa606dc40fd2d675c1af4733adbe43986c1d
+        image: zulake/api-gateway:c6a4b2d0a3a27563e89b520fbe59617f0fba1e0e
         imagePullPolicy: Always
         ports:
         - containerPort: 8765
