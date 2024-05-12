@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: user-service
-        image: zulake/user-service:2ca13be07925c6982bf6f4e569ccf0ab3d902cb5
+        image: zulake/user-service:7be8198a892bd377b92b10f93d82b69c0cc22801
         imagePullPolicy: Always
         ports:
         - containerPort: 8000
