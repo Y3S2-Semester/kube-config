@@ -29,7 +29,7 @@ spec:
           failureThreshold: 3
           httpGet:
             scheme: HTTP
-            path: /actuator/health/readiness
+            path: /system/health
             port: 3000
         livenessProbe:
           initialDelaySeconds: 120
@@ -39,7 +39,7 @@ spec:
           failureThreshold: 3
           httpGet:
             scheme: HTTP
-            path: /actuator/health/liveness
+            path: /system/health
             port: 3000
         resources:
           requests:
