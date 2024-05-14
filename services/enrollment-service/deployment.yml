@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: enrollment-service
-        image: zulake/enrollment-service:2b960b522bd3b59732584d93ff0545db9ff1f2cb
+        image: zulake/enrollment-service:2e412f8cc133120afcfe3bbc98b2e8320e6e253c
         imagePullPolicy: Always
         ports:
         - containerPort: 8300
