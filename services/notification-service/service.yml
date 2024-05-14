@@ -6,7 +6,5 @@ spec:
   selector:
     app: notification-service
   ports:
-  - protocol: TCP
-    port: 80
+  - port: 80
     targetPort: 7000
-  type: LoadBalancer

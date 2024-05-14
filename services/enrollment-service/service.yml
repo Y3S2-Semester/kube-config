@@ -6,7 +6,5 @@ spec:
   selector:
     app: enrollment-service
   ports:
-  - protocol: TCP
-    port: 80
+  - port: 80
     targetPort: 8300
-  type: LoadBalancer

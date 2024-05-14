@@ -6,7 +6,5 @@ spec:
   selector:
     app: course-content-service
   ports:
-  - protocol: TCP
-    port: 80
+  - port: 80
     targetPort: 8200
-  type: LoadBalancer
